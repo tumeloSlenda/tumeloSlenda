@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My Scripts</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+	</head>
+	
+	<body>
+		<script>
+			var nkani = '?//';
+			var tel = nkani.length;
+			var me = 0, us = 0, jedi = 0, lone = 0, tws = 0;
+			var string;
+			while(me <= tel){
+				if(nkani.charAt(me) === nkani.charAt(me).toUpperCase()){
+					++us;
+				}
+				if(nkani.charAt(me) === nkani.charAt(me).toLowerCase()){
+					++jedi;
+				}
+				if(nkani.charAt(me) === '1' || nkani.charAt(me) === '2' || nkani.charAt(me) === '3' || nkani.charAt(me) === '4' || nkani.charAt(me) === '5' || nkani.charAt(me) === '6' || nkani.charAt(me) === '7' || nkani.charAt(me) === '8' || nkani.charAt(me) === '9' || nkani.charAt(me) === '0'){
+					++lone;
+				}	
+				if(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(nkani) == true){
+					++tws;
+				}
+				++me;
+			}
+			us -= 1;
+			jedi -= 1;
+			
+			console.log("upper: "+us+"\nLower: "+jedi+"\nNumber: "+lone+"\nSpecial: "+tws);
+			
+			
+		</script>
+	</body>
+	
+</html>
